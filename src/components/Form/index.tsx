@@ -1,50 +1,8 @@
-import { Button, Checkbox, createTheme, FormControl, FormLabel, InputAdornment, InputLabel, MenuItem, OutlinedInput, Select, TextareaAutosize, TextField } from "@mui/material";
-import { palette } from "@mui/system";
+import { Button, Checkbox, FormControl, FormLabel, InputAdornment, MenuItem, OutlinedInput, Select, TextField } from "@mui/material";
 import style from '../Form/styles.module.scss'
 
-declare module '@mui/material/styles' {
-  interface Theme {
-    status: {
-      danger: React.CSSProperties['color'];
-    };
-  }
-
-  interface Palette {
-    neutral: Palette['primary'];
-  }
-  interface PaletteOptions {
-    neutral: PaletteOptions['primary'];
-  }
-
-  interface PaletteColor {
-    darker?: string;
-  }
-  interface SimplePaletteColorOptions {
-    darker?: string;
-  }
-  interface ThemeOptions {
-    status: {
-      danger: React.CSSProperties['color'];
-    };
-  }
-}
-
 export function Form() {
-  const theme = createTheme({
-    status: {
-      danger: '#e53e3e',
-    },
-    palette: {
-      primary: {
-        main: '#7DF489',
-        darker: '#2E7D36',
-      },
-      neutral: {
-        main: '#64748B',
-        contrastText: '#fff',
-      },
-    },
-  });
+
   return (
     <div className={style.container}>
       <FormControl className={style.formContainer}>
@@ -209,17 +167,17 @@ export function Form() {
         </div>
         <Button variant="contained" sx={{
           marginTop: "2rem",
-          backgroundColor:"#7DF489",
-          height:50,
+          backgroundColor: "#7DF489",
+          height: 50,
           "&:hover": {
-            backgroundColor:"#42ce50"
+            backgroundColor: "#42ce50"
           }
         }}>CRIAR VAGA</Button>
         <Button variant="contained" sx={{
-          backgroundColor:"#F47D7D",
-          height:50,
+          backgroundColor: "#F47D7D",
+          height: 50,
           "&:hover": {
-            backgroundColor:"#bd4848"
+            backgroundColor: "#bd4848"
           }
         }}>LIMPAR FORMULÁRIO</Button>
       </FormControl>
