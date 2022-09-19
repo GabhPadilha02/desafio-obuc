@@ -1,11 +1,13 @@
-import { Form } from "./components/Form";
-import Logo from './assets/Logo.svg'
+import { BrowserRouter } from "react-router-dom";
+import { AppProvider } from "./context/AppContext";
+import { Router } from "./router";
+
 export function App() {
   return (
-    <>
-      <img src={Logo} alt="" width={100} height={100}/> 
-      <Form />
-    </>
-    
+    <AppProvider>
+      <BrowserRouter>
+        <Router/>
+      </BrowserRouter>
+    </AppProvider>
   )
 }
